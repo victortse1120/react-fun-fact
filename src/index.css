@@ -5,7 +5,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-color: #282D35;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 code {
@@ -13,52 +18,57 @@ code {
     monospace;
 }
 
+nav.dark {
+  background-color: #21222A;
+}
+
 .nav-items {
   list-style: none;
   display: flex;
 }
 
-.nav {
+nav {
   display: flex;
   align-items: center;
+  background-color: #ffffff;
   padding: 30px 25px;
-  background-color: #21222A;
-  height: 90px;
-
+  height: 60px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
-.nav > h3, nav > h4 {
-  margin: 0;
-}
-
-.nav > h3 {
+nav>h3 {
   margin-right: auto;
-  color: #61DAFB;
-  font-weight: 700;
-  font-size: 22px;
 }
 
-.nav > h4 {
-  color: #DEEBF8;
-  margin-right: 27px;
-  font-weight: 600;
-}
-
-.nav-items > li {
+.nav-items>li {
   padding: 10px;
-} 
+}
 
-.nav-logo {
+.nav--logo_icon {
   height: 30px;
   margin-right: 6px;
 }
 
+.nav--logo_text {
+  color: #61DAFB;
+  margin-right: auto;
+}
+
 main {
-  padding: 57px 27px;
-  color: white;
-  background-image: url(./images/reactjs-icon.png);
+  padding: 57px 27px 0px 27px;
+  color: #2B283A;
+  background-image: url("./images/reactjs-icon-light.png");
   background-repeat: no-repeat;
-  background-position: right 75%;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+}
+
+main.dark {
+  background-image: url("./images/reactjs-icon-dark.png"); 
+  background-color: #282D35;
+  color: white;    
 }
 
 .main--title {
@@ -72,12 +82,12 @@ main {
   max-width: 400px;
 }
 
-.main--facts > li {
+.main--facts>li {
   line-height: 19px;
   padding-block: 10px;
 }
 
-.main--facts > li::marker {
+.main--facts>li::marker {
   color: #61DAFB;
   font-size: 1.4rem;
 }

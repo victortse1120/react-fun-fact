@@ -16,7 +16,7 @@ root.render(
 function App(props) {
   const [darkMode, setDarkMode] = React.useState(true);
   function toggleDarkMode() {
-    setDarkMode(prevMode => ! prevMode)
+    setDarkMode(prevMode => !prevMode)
   }
   return (
     <div className="container">
